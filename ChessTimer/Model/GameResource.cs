@@ -176,6 +176,9 @@ namespace ChessTimer
         /// <returns></returns>
         public string StartGames()
         {
+            if (Players.Count == 0)
+                return "The game has not started yet.";
+
             var res = "";
 
             for (int i = 1; i <= Players.Count / 2; i++)
@@ -217,6 +220,9 @@ namespace ChessTimer
         /// <returns>Сообщение о ходе следующего игрока.</returns>
         public string StartNextPlayerTurn(string name)
         {
+            if (Players.Count == 0)
+                return "The game has not started yet.";
+
             int pairId = GetPairId(name);
 
             var currentPlayer = Players.Where(x => x.PairId == pairId && x.IsActive).First();
@@ -236,6 +242,9 @@ namespace ChessTimer
         /// <returns></returns>
         public string PauseGame(string name)
         {
+            if (Players.Count == 0)
+                return "The game has not started yet.";
+
             int pairId = GetPairId(name);
 
             var activePairPlayer = Players.Where(x => x.PairId == pairId && x.IsActive).First();
@@ -254,6 +263,9 @@ namespace ChessTimer
         /// <returns></returns>
         public string ContinueGame(string name)
         {
+            if (Players.Count == 0)
+                return "The game has not started yet.";
+
             int pairId = GetPairId(name);
 
             var activePairPlayer = Players.Where(x => x.PairId == pairId && x.IsActive).First();
@@ -272,6 +284,9 @@ namespace ChessTimer
         /// <returns></returns>
         public string GetGameInfo()
         {
+            if (Players.Count == 0)
+                return "The game has not started yet.";
+
             var resultInfo = GetTurnsInfo();
             var hasNoTurnsInfo = GetHasNoTurns();
 
