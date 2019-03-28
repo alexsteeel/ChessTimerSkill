@@ -6,7 +6,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-// Assembly attribute to enable the Lambda function's JSON input to be converted into a .NET class.
 [assembly: LambdaSerializer(typeof(Amazon.Lambda.Serialization.Json.JsonSerializer))]
 
 namespace ChessTimer
@@ -112,6 +111,10 @@ namespace ChessTimer
             return response;
         }
 
+        /// <summary>
+        /// Получение списка ресурсов.
+        /// </summary>
+        /// <returns></returns>
         public List<GameResource> GetResources()
         {
             List<GameResource> resources = new List<GameResource>();
