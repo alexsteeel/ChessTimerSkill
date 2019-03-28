@@ -8,13 +8,14 @@ namespace ChessTimer
     public class Turn
     {
         #region Constructors
+
         public Turn(int id)
         {
             Id = id;
             Duration = 0;
         }
 
-        #region
+        #endregion
 
         #region Fields.
 
@@ -53,6 +54,6 @@ namespace ChessTimer
             Duration += (DateTime.Now - StartTime).TotalSeconds;
         }
 
-        #region
+        #endregion
     }
 }
