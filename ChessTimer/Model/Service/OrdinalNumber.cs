@@ -1,5 +1,8 @@
 ﻿namespace ChessTimer
 {
+    /// <summary>
+    /// Порядковые числительные.
+    /// </summary>
     public enum OrdinalNumber
     {        
         Null,
