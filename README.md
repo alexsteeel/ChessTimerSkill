@@ -1,4 +1,6 @@
 # ChessTimerSkill
+Навык для Amazon Alexa.  
+
 Open skill: open chess timer.  
 Next, you must specify a clear number of players from two to eight and confirm the start of games.  
 To pass the turn to the next player, say the player's name + next.  
